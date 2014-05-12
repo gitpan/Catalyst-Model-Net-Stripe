@@ -13,11 +13,11 @@ Catalyst::Model::Net::Stripe - Stripe Model for Catalyst
 
 =head1 VERSION
 
-Version 0.01
+Version 0.02
 
 =cut
 
-our $VERSION = '0.01';
+our $VERSION = '0.02';
 
 =head1 SYNOPSIS
 
@@ -54,7 +54,7 @@ our $VERSION = '0.01';
           description => 'Test for Net::Stripe',
         );
 
-        $c->res->body($customer->id . "\n");
+        $c->res->body($customer->id);
     }
  
     1;
@@ -64,7 +64,9 @@ our $VERSION = '0.01';
 =cut
 
 =head2 new
+
 	L<Catalyst> calls this method.
+
 =cut
 
 sub new {
